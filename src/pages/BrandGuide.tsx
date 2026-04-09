@@ -81,8 +81,8 @@ export default function BrandGuide() {
                               Recommended
                             </span>
                           ) : (
-                            <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm">
-                              Good
+                            <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm">
+                              {brand.name.includes('D3') && !brand.name.includes('K2') ? 'D3 Only' : 'Good'}
                             </span>
                           )}
                         </td>
@@ -161,7 +161,7 @@ export default function BrandGuide() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-amber-600 font-bold">•</span>
-                    <span>We are not affiliated with any brands listed</span>
+                    <span>This page contains affiliate links. If you purchase through these links, D Dose earns a small commission at no extra cost to you.</span>
                   </li>
                 </ul>
               </div>

@@ -28,9 +28,12 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
         <div className="flex justify-between items-center h-16">
           <button
             onClick={() => handleNavigate('home')}
-            className="text-2xl font-bold bg-gradient-to-r from-amber-500 to-yellow-600 bg-clip-text text-transparent"
+            className="flex flex-col items-start"
           >
-            D Dose
+            <span className="text-2xl font-bold bg-gradient-to-r from-amber-500 to-yellow-600 bg-clip-text text-transparent">
+              D Dose
+            </span>
+            <span className="text-xs text-gray-600 -mt-1">by Sunstacked India</span>
           </button>
 
           <div className="hidden md:flex space-x-8">
