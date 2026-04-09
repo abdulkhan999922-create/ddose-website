@@ -13,6 +13,7 @@ export interface Brand {
   price_range: string;
   is_recommended: boolean;
   display_order: number;
+  amazon_link?: string;
   created_at: string;
 }
 

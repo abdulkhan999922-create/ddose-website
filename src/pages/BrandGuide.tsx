@@ -52,6 +52,7 @@ export default function BrandGuide() {
                       <th className="px-6 py-4 text-left text-sm font-semibold">Form</th>
                       <th className="px-6 py-4 text-left text-sm font-semibold">Price Range</th>
                       <th className="px-6 py-4 text-center text-sm font-semibold">Status</th>
+                      <th className="px-6 py-4 text-center text-sm font-semibold">Buy</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
@@ -83,6 +84,21 @@ export default function BrandGuide() {
                             <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm">
                               Good
                             </span>
+                          )}
+                        </td>
+                        <td className="px-6 py-4 text-center">
+                          {brand.amazon_link ? (
+                            <a
+                              href={brand.amazon_link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
+                            >
+                              <ExternalLink size={16} />
+                              Amazon
+                            </a>
+                          ) : (
+                            <span className="text-gray-400 text-sm">-</span>
                           )}
                         </td>
                       </tr>
@@ -161,6 +177,13 @@ export default function BrandGuide() {
                 <ExternalLink size={20} />
                 Try the Calculator
               </button>
+            </div>
+
+            <div className="mt-8 text-center text-sm text-gray-600 bg-gray-50 rounded-lg p-4 border border-gray-200">
+              <p>
+                This page contains affiliate links. If you purchase through these links,
+                D Dose earns a small commission at no extra cost to you.
+              </p>
             </div>
           </>
         )}
